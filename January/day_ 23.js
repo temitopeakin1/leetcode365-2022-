@@ -47,3 +47,29 @@
     
     return ans;
 };
+
+// solution II
+
+
+var sequentialDigits = function(low, high) {
+    
+    let l = low.toString().length,
+        h = high.toString().length,
+        str = "123456789",
+        result = [];
+      
+    for (let i=l; i<=h;i++){
+        for (let j=0;j<10-i;j++){
+            console.log("hello")
+            let num = parseInt(str.substring(j, j + i));
+            if (num >= low && num <= high){
+                result.push(num);
+                
+            }
+            
+        }
+        
+    }
+    return result;
+
+};
